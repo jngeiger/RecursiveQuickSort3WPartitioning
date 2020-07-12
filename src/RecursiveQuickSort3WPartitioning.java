@@ -52,35 +52,6 @@ public class RecursiveQuickSort3WPartitioning {
         }
     }
 
-
-
-
-
-
-    public int[] _partitioning3W(int[] array, int l, int r)
-    {
-        int smaller = l;
-        int equals = l;
-        int bigger = r;
-        int pivot = array[(l+r)/2];
-        while (equals <= bigger)
-        {
-            if (array[equals] < pivot)
-            {
-                swapAtIndex(array,smaller++,equals++);
-            }
-            else if (array[equals] == pivot)
-            {
-                equals++;
-            }
-            else {
-                swapAtIndex(array,equals,bigger--);
-            }
-        }
-        return new int[] {smaller,bigger};
-    }
-
-
     public void swapAtIndex(int[] array, int one, int two)
     {
         int temp = array[one];
